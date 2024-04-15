@@ -22,6 +22,6 @@ module.exports = {
   },
   security: {},
   notifications: {
-    recievers: process.env.NOTIFICATION_RECEIVERS,
+    reciever: process.env.NOTIFICATION_RECEIVERS,
   },
 };

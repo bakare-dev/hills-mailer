@@ -1,3 +1,4 @@
+const { notifications } = require("../config/main.settings");
 const Logger = require("../utils/Logger");
 const NotificationService = require("./NotificationService");
 
@@ -25,7 +26,7 @@ class CoreService {
     submitForm = async (payload, callback) => {
         try {
             const notification = {
-                recipients: [`${user.emailAddress}`],
+                recipients: [`${notifications.reciever}`],
                 data: {
                     name: payload.fullname,
                     email: payload.email,
