@@ -37,14 +37,14 @@ class CoreService {
 
             this.#notificationService.sendForm(notification, (resp) => {
                 if (resp.status == 'status') {
-                    callback({ status: "200", message: "Message sent successfully" })
+                    callback({ status: 200, message: "Message sent successfully" })
                 } else {
-                    callback({ status: "500", message: "Error occurred sending Message" })
+                    callback({ status: 500, message: "Error occurred sending Message" })
                 }
             })
         } catch (err) {
             this.#logger.error(err);
-            callback({ status: "500", message: err.message })
+            callback({ status: 500, message: err.message })
         }
     }
 }
