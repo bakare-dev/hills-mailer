@@ -1,0 +1,22 @@
+{
+  "name": "hills-mailer",
+  "version": "1.0.0",
+  "description": "Mailer Service",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "nodemon main.js"
+  },
+  "author": "Bakare Praise",
+  "license": "ISC",
+  "dependencies": {
+    "@logtail/node": "^0.4.21",
+    "@logtail/winston": "^0.4.21",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.13",
+    "validate.js": "^0.13.1",
+    "winston": "^3.13.0"
+  }
+}

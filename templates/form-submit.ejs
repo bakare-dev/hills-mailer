@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .details {
+            margin-top: 20px;
+        }
+
+        .details p {
+            margin-bottom: 5px;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Form Submission Details</h2>
+        <div class="details">
+            <p><span class="label">Name:</span> <span>
+                    <%= name %>
+                </span></p>
+            <p><span class="label">Email:</span> <span>
+                    <%= email %>
+                </span></p>
+            <p><span class="label">Number:</span> <span>
+                    <%= number %>
+                </span></p>
+            <p><span class="label">Message:</span> <span>
+                    <%= message %>
+                </span></p>
+        </div>
+    </div>
+</body>
+
+</html>
