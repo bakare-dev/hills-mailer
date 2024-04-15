@@ -36,7 +36,7 @@ class CoreController {
                 return res.status(422).json({message: "validation error", data: { validation }});
             }
 
-            this.#service.submitForm(payload, (response) => {
+            this.#service.submitForm(req.body, (response) => {
                 res.status(response.status).json(response);
             });
 
