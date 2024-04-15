@@ -36,7 +36,7 @@ class CoreService {
             }
 
             this.#notificationService.sendForm(notification, (resp) => {
-                if (resp.status == 'status') {
+                if (resp.status == 'success') {
                     callback({ status: 200, message: "Message sent successfully" })
                 } else {
                     callback({ status: 500, message: "Error occurred sending Message" })
