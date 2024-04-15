@@ -22,7 +22,7 @@ class NotificationService {
         message.recipients.forEach(async (item) => {
 
             let info = {
-                sender: "noreply@hill.dev",
+                sender: "noreply@realighteduconsult.com",
                 templateFile: "form-submit.ejs",
                 subject: "Form Submission",
                 recipients: item,
