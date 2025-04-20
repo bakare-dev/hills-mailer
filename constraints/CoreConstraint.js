@@ -1,47 +1,38 @@
-
-
 let instance;
 
-
 class CoreConstraint {
+	constructor() {
+		if (instance) return instance;
 
-    constructor() {
+		instance = this;
+	}
 
-        if (instance) return instance;
-
-
-        instance = this;
-
-    }
-
-    submitFormConstraints = () => {
-        return {
-            fullname: {
-                presence: true,
-                length: {
-                    minimum: 3,
-                }
-            },
-            email: {
-                presence: true,
-                email: true
-            },
-            number: {
-                presence: true,
-                numericality: {
-                    onlyInteger: true,
-                    greaterThan: 0
-                }
-            },
-            message: {
-                presence: true,
-                length: {
-                    minimum: 10
-                }
-            }
-        }
-    }
+	submitFormConstraints = () => {
+		return {
+			fullname: {
+				presence: true,
+				length: {
+					minimum: 3,
+				},
+			},
+			email: {
+				presence: true,
+				email: true,
+			},
+			subject: {
+				presence: true,
+				length: {
+					minimum: 10,
+				},
+			},
+			message: {
+				presence: true,
+				length: {
+					minimum: 10,
+				},
+			},
+		};
+	};
 }
-
 
 module.exports = CoreConstraint;

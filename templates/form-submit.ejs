@@ -2,63 +2,116 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Submission Details</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Contact Form Submission</title>
     <style>
+        :root {
+            --green: #2e8b57;
+            --orange: #ff7f50;
+            --light-bg: #f9f9f9;
+            --white: #ffffff;
+            --gray: #666;
+            --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            padding: 20px;
+            background-color: var(--light-bg);
+            font-family: var(--font);
+            margin: 0;
+            padding: 0;
         }
 
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
+        .email-wrapper {
+            max-width: 640px;
+            margin: 40px auto;
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            padding: 30px;
         }
 
-        h2 {
-            color: #333;
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        p {
-            margin: 10px 0;
+        .logo img {
+            max-width: 150px;
+            height: auto;
         }
 
-        .details {
-            margin-top: 20px;
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        .details p {
-            margin-bottom: 5px;
+        .header h1 {
+            color: var(--green);
+            font-size: 1.8rem;
+            margin-bottom: 8px;
         }
 
-        .label {
+        .header p {
+            color: var(--orange);
+            font-weight: 500;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .content {
+            padding-top: 10px;
+        }
+
+        .content p {
+            margin: 12px 0;
+            font-size: 1rem;
+            color: var(--gray);
+        }
+
+        .content .label {
             font-weight: bold;
+            color: var(--green);
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #aaa;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h2>Form Submission Details</h2>
-        <div class="details">
-            <p><span class="label">Name:</span> <span>
-                    <%= name %>
-                </span></p>
-            <p><span class="label">Email:</span> <span>
-                    <%= email %>
-                </span></p>
-            <p><span class="label">Number:</span> <span>
-                    <%= number %>
-                </span></p>
-            <p><span class="label">Message:</span> <span>
-                    <%= message %>
-                </span></p>
+    <div class="email-wrapper">
+        <div class="logo">
+            <img src="https://res.cloudinary.com/dzybjyiku/image/upload/v1744846977/logo_klijni.png"
+                alt="Company Logo" />
+        </div>
+
+        <div class="header">
+            <h1>
+                <%= subject %>
+            </h1>
+        </div>
+
+        <div class="content">
+            <p><span class="label">Name:</span>
+                <%= name %>
+            </p>
+            <p><span class="label">Email:</span>
+                <%= email %>
+            </p>
+            <p><span class="label">Message:</span></p>
+            <p style="margin-left: 16px;">
+                <%= message %>
+            </p>
+        </div>
+
+        <div class="footer">
+            This message was sent from your website's contact form.
         </div>
     </div>
 </body>
